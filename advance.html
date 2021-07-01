@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+          <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <base target="_top">
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+border: 3px solid #f1f1f1;
+  padding: 16px;
+}
+
+ .question-dashboard {
+			display: flex;
+		}
+
+ .question-dashboard .table {
+			flex: 1;
+			box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em, rgba(2, 8, 20, 0.08) 0px 0.085em 0.175em;
+		}
+
+.question-dashboard .table thead th,
+		.question-dashboard .table tbody td {
+			font-size: 14px;
+		}
+ .question-dashboard .card {
+			width: 240px;
+			margin-right: 15px;
+			border: 0;
+			background: #fdfdfd;
+			box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em, rgba(2, 8, 20, 0.08) 0px 0.085em 0.175em;
+		}
+
+@media all and (min-width:768px) and (max-width:991px) {
+			.question-dashboard .card {
+				width: 270px;
+			}
+		}
+
+ @media all and (max-width: 767.98px) {
+			.question-dashboard {
+				flex-direction: column;
+			}
+		}
+
+    .centerText{
+      text-align: center;
+    }
+</style>
+
+  </head>
+  <body>
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="index.html"><img src="https://i.ibb.co/7N4Hc2g/logo.png" alt="logo" border="0" /></a>
+    <br>
+    <div style="style:center">
+      <span id="headnote" class="log"><center>Retailer Benefit Calculator</center></span>
+      </div>
+     </h1>
+      <span id="userhead"></span>
+  </div>
+
+<div class="visible">
+<div class="container"
+id="dashboardContainer">
+<div class="table-responsive ">
+						<div
+             class="question-dashboard">
+                        
+  
+						<table 
+            class="table table-bordered" id="noteTable">
+ <thead>
+ <tr>
+ <th colspan="2"><center>PREPAID SCHEME</center></th>
+ </tr>
+ </thead>
+<tbody id="table-body"> 
+  <tr>
+    <td><b>Sale Per Month</b></td>
+    <td><input type="text" placeholder="Enter amount (Minimum amount is 150000/-)"  id="saleValue" ></td>
+    </tr><tr></tr>
+  <tr>
+    <td><b>Sale Per Quarter</b></td>
+    <td><input type="text"   id="qSale" ></td>
+    </tr>
+    <tr>
+    <td><b>Yearly Sale</b></td>
+    <td><input type="text"   id="ySale" ></td>
+    </tr>
+    <tr>
+    <td><b>Benefit Per Quarter</b></td>
+    <td><input type="text"   id="benifitInSale" ></td>
+    </tr>
+    <tr>
+    <td><b>Gift Category</b></td>
+    <td><input type="text"   id="gift" ></td>
+    </tr>
+    <tr>
+    <td><b>Annual Gift Value</b></td>
+    <td><input type="text"   id="giftValue" ></td>
+    </tr>
+    <tr>
+    <td><b>Total Benefit</b></td>
+    <td><input type="text"  id="totBenifit" ></td>
+    </tr>
+    <tr><td></td><td></td></tr>
+    <tr><td></td><td></td></tr>
+     <tr>
+    <td colspan="2" class="centerText"><b>Terms & Conditions</b></td>
+    </tr>
+    <tr>
+          <td colspan="2">1. Eligible Value is min Rs 150000 (Incl of GST) per month. <br>
+          2. Customer needs to pay in advance as per slab every month, e.g. customers want to be in a slab of Rs 2 Lacs a month, he needs to deposit Rs 2 Lacs in advance, customer can draw supplies up to Rs 2 Lacs, once the advance is exhausted, he needs to top up the account to draw further supplies.<br>
+    3. Next month again customer needs to deposit advance to draw supplies.<br>
+    4. Quarterly Benefit will be credited by way of Credit note after completion of respective quarter e.g. Quarterly benefit will be calculated of Pro-rata basis,  Customer achieves Turnover of Rs.6.30 Lacs, the quarterly benefit will be Rs.18900 instead of Rs 18000 as against Turnover of Rs 6 Lacs<br>
+    5. Any Returns will be adjusted against particular months sale.<br>
+    6. All supplies will be as per normal Discount Policy only.<br>
+    7. Annual Gift Eligibility: <br>
+    ...a: Completion of all 4 quarters as per slabs or more.<br>
+    ...b: If any Credit is requested for any supply, customer becomes ineligible for quarterly and yearly benefits.<br>
+    ...c. Annual Gift can be redeemed after completion of Annual Target or if customer does not want the Gift, Value of the gift will be credited to his account.<br>
+    ...d. If Annual Turnover falls in Higher Slab, e.g. 1st six months the turnover is Rs 12 Lacs and next 6 months turnover is Rs 18 Lacs, total turnover Rs 30 Lacs, customer gets eligible for Higher slab of Gift.<br>
+    8. Company resrves the right to withdraw the scheme anytime without assigning any reason.</td>
+      </tr>      
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<!-- Add Note Modal -->
+	<div class="modal fade" id="addEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="addEmployeeModal"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header pt-3 pb-2">
+					
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					 <input type="text" placeholder="Enter your note"  id="noteText" >
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-success btn-sm" id="saveNote">Save</button>
+				</div>
+			</div>
+		</div>
+	</div> <!-- modal -->
+
+
+<script>
+
+debugger
+document.getElementById("saleValue").addEventListener("change",changeValue);
+
+function changeValue(){
+
+var num1= document.getElementById("saleValue").value;
+console.log(num1);
+var saleValue = parseFloat(num1);
+
+//var acessName= document.getElementById("userhead").innerText;
+if(saleValue>149999){
+document.getElementById("qSale").value = saleValue*3;
+document.getElementById("ySale").value = saleValue*12;
+document.getElementById("benifitInSale").value = saleValue*0.09;
+if(saleValue*12 > 4799999){
+document.getElementById("gift").value = "Bike";
+document.getElementById("giftValue").value = 96000.00;
+}else if(saleValue*12 > 3599999){
+document.getElementById("gift").value = "Scooty";
+document.getElementById("giftValue").value = 63000.00;
+}else if(saleValue*12 > 2999999){
+document.getElementById("gift").value = "Laptop";
+document.getElementById("giftValue").value = 45000.00;
+}else if(saleValue*12 > 2399999){
+document.getElementById("gift").value = "AC";
+document.getElementById("giftValue").value = 30000.00;
+}else if(saleValue*12 > 1799999){
+document.getElementById("gift").value = "Mobile";
+document.getElementById("giftValue").value = 18000.00;
+}else if(saleValue*12 <= 1799999){
+document.getElementById("gift").value = "";
+document.getElementById("giftValue").value = "";
+}
+var text1= (document.getElementById("benifitInSale").value)*4;
+var text2= document.getElementById("giftValue").value;
+var benifitPerYear = parseFloat(text1);
+var annualGiftValue = parseFloat(text2);
+var total= (benifitPerYear)+(annualGiftValue);
+document.getElementById("totBenifit").value =total;
+
+}else{
+document.getElementById("qSale").value = "";
+document.getElementById("ySale").value = "";
+document.getElementById("benifitInSale").value = "";
+document.getElementById("gift").value = "";
+document.getElementById("giftValue").value = "";
+document.getElementById("totBenifit").value = "";
+document.getElementById("saleValue").value ="Enter 150000 or more amount";
+
+}
+
+
+// if(note!='' && note!=null){
+// google.script.run.withSuccessHandler(refresh).saveNote(note,user,id);
+// }else{
+// alert('enter any note before save');
+// }
+}
+</script>
+
+  </body>
+</html>
