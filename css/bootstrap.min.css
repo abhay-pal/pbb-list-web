@@ -113,7 +113,7 @@ abbr[title] {
 }
 
 address {
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     font-style: normal;
     line-height: inherit
 }
@@ -583,7 +583,7 @@ pre code {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 @media (min-width:576px) {
@@ -615,7 +615,7 @@ pre code {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 .row {
@@ -4416,6 +4416,10 @@ input[type=submit].btn-block {
     -ms-flex-align: center;
     align-items: center
 }
+
+
+
+
 
 .navbar-toggler {
     padding: .25rem .75rem;
